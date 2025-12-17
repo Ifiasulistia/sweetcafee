@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Sweet Café | Order Makanan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Sweet Café</h1>
+  <p class="tagline">Delicious & Cozy</p>
+</header>
+
+<div class="container" id="loginBox">
+  <div class="card">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+</div>
+
+<div class="container hidden" id="mainApp">
+
+  <h2>Menu</h2>
+  <div class="menu-grid">
+    <div class="card">
+      <img src="https://i.imgur.com/6YV0J7Y.jpg">
+      <h3>Strawberry Latte</h3>
+      <p>Rp25.000</p>
+      <button>Pesan</button>
+    </div>
+    <div class="card">
+      <img src="https://i.imgur.com/4bZQZ8L.jpg">
+      <h3>Cupcake Strawberry</h3>
+      <p>Rp18.000</p>
+      <button>Pesan</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Pemesanan</h2>
+    <textarea placeholder="Catatan pesanan"></textarea>
+    <select onchange="toggleDelivery(this.value)">
+      <option value="tempat">Pesan di Tempat</option>
+      <option value="delivery">Delivery Order</option>
+    </select>
+    <div id="alamatBox" class="hidden">
+      <input placeholder="Alamat Lengkap">
+      <input placeholder="No. Telepon">
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Bukti Pembayaran</h2>
+    <input type="file">
+  </div>
+
+  <div class="card">
+    <h2>Rating</h2>
+    <p>Makanan</p>
+    <div class="rating">★★★★★</div>
+    <p>Customer Service</p>
+    <div class="rating">★★★★★</div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
